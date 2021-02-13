@@ -1,0 +1,10 @@
+version: "2"
+services:
+  db:
+    build: webflux-r2dbc-sample-db
+    ports:
+      - "33306:3306"
+    environment:
+      - TZ=Asia/Tokyo
+      - MYSQL_DATABASE=webflux_r2dbc_sample
+      - MYSQL_ROOT_PASSWORD=password
